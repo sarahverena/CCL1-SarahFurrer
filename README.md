@@ -19,10 +19,22 @@ Introduction CCL, planing out the week, implementing the jump n run mechanics,he
 ### Day 3 
  *******************
 
-- fixing reset game/gravity bug 
-- implementing the weapon& killing of enemie
-- designing level(plattforms)
-- making new level 
+- fixing reset game/gravity bug ⭐️
+- implementing the weapon& killing of enemy⭐️
+- designing level(plattforms) -> day4
+- making new level -> day4
+- I was only able to shoot in one direction, now I am able to shoot in both directions 
+- I controlled the amount of weapons you can shoot at once, by limiting it to being able to shoot only one weapon every 2-3 seconds
+
+### Day 4
+**************************
+- setting up github properly tp be able to commit my code 
+- designing levels / maybe making a new level 
+- making a proper pause and end screen
+- 
+
+
+
 
 
 
