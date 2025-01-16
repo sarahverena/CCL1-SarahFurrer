@@ -5,6 +5,7 @@ import { BlockObject } from "../gameObjects/blockObject.js";
 import { Floor } from "../gameObjects/floor.js";
 import { Spider } from "../gameObjects/spider.js"; 
 import  {Heart} from "../gameObjects/heart.js";
+import { Portal } from "../gameObjects/portal.js";
 
 
 let gameOverButton = document.getElementById("gameOverButton");
@@ -12,8 +13,13 @@ gameOverButton.addEventListener("click", setupGame);
 
 function displayGameOverScreen() {
     let gameOverScreen = document.getElementById("gameOverScreen");
-    gameOverScreen.style.display = "block";
+    gameOverScreen.style.display = "flex";
 
+}
+
+function endGameScreen() {
+    let endGameScreen = document.getElentById("endGameScreen")
+    endGameScreen.style.display = "flex";
 }
 
 
@@ -22,6 +28,9 @@ function gameLoop(totalRunningTime) {
         displayGameOverScreen();
         global.gameRunning = false;
     }
+   
+
+    
     global.deltaTime = totalRunningTime - global.prevTotalRunningTime; // Time in milliseconds between frames
     global.deltaTime /= 1000; // Convert milliseconds to seconds for consistency in calculations
     global.prevTotalRunningTime = totalRunningTime; // Save the current state of "totalRunningTime", so at the next call of gameLoop (== next frame) to calculate deltaTime again for that next frame.
@@ -57,7 +66,7 @@ function setupGame() {
     new BlockObject(400, 200, 50, 50);
     new Heart (400, 200, 50, 50);
     new Spider(400, 200, 50, 50);
-    
+    new Portal(1200, 350, 50, 50);
     
     
    // global.weapon = new Weapon(global.playerObject.x + 30, global.playerObject.y, 40, 40);
