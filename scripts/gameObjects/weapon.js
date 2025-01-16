@@ -12,7 +12,9 @@ class Weapon extends BaseGameObject {
 	movementSpeed = 350; 
 
      reactToCollision = function (collidingObject) {
-		console.log(collidingObject.name);
+        if(collidingObject.name == "Spider"){
+            this.active = false; 
+        }
     }
 
 

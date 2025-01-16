@@ -73,7 +73,7 @@ function setupGame() {
     global.leftMoveTrigger = new MoveTrigger(-10, 100, 20, 900, 100);
     global.rightMoveTrigger = new MoveTrigger(800, 100, 20, 900, -100);
     new Floor(0, 400, 9000, 40);
-    new BlockObject(200, 280, 50, 50);
+    new BlockObject(200, 280, 100, 100);
     new BlockObject(400, 200, 50, 50);
     new Heart (400, 200, 50, 50);
     new Spider(400, 200, 50, 50);
