@@ -7,7 +7,7 @@ import { Spider } from "../gameObjects/spider.js";
 import  {Heart} from "../gameObjects/heart.js";
 import { Portal } from "../gameObjects/portal.js";
 
-
+//restart game button 
 let gameOverButton = document.getElementById("gameOverButton");
 gameOverButton.addEventListener("click", setupGame);
 
@@ -17,10 +17,19 @@ function displayGameOverScreen() {
 
 }
 
-function endGameScreen() {
-    let endGameScreen = document.getElentById("endGameScreen")
-    endGameScreen.style.display = "flex";
+let startGameButton = document.getElementById("startGameButton");
+startGameButton.addEventListener("click", () => {
+    let startGameScreen = document.getElementById("startGameScreen")
+    startGameScreen.style.display = "none";
+    setupGame();
+});
+
+
+function startGameScreen() {
+    let startGameScreen = document.getElementById("startGameScreen")
+    startGameScreen.style.display = "none";
 }
+
 
 
 function gameLoop(totalRunningTime) {
@@ -28,6 +37,7 @@ function gameLoop(totalRunningTime) {
         displayGameOverScreen();
         global.gameRunning = false;
     }
+
    
 
     
@@ -57,6 +67,7 @@ function setupGame() {
     let gameOverScreen = document.getElementById("gameOverScreen");
     gameOverScreen.style.display = "none";
     resetGlobals();
+    
 
     global.playerObject = new Skeleton(0, 400, 64, 64);
     global.leftMoveTrigger = new MoveTrigger(-10, 100, 20, 900, 100);

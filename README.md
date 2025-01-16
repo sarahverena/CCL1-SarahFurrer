@@ -33,5 +33,6 @@ Introduction CCL, planing out the week, implementing the jump n run mechanics,he
 **************************
 - setting up github properly tp be able to commit my code 
 - designing levels / maybe making a new level 
-- making a proper pause and end screen
-- 
+- making a proper pause and end screen ⭐️ (made the end screen, not sure if I even want to have a pause screen)
+- making a home screen ⭐️
+- Ideas: maybe settings if the user prefers arrow keys or awsd keys 
