@@ -31,8 +31,12 @@ Introduction CCL, planing out the week, implementing the jump n run mechanics,he
 - I controlled the amount of weapons you can shoot at once, by limiting it to being able to shoot only one weapon every 2-3 seconds
 ### Day 4
 **************************
-- setting up github properly tp be able to commit my code 
-- designing levels / maybe making a new level 
+- setting up github properly tp be able to commit my code ⭐️
+- designing levels / maybe making a new level ‼️
 - making a proper pause and end screen ⭐️ (made the end screen, not sure if I even want to have a pause screen)
 - making a home screen ⭐️
 - Ideas: maybe settings if the user prefers arrow keys or awsd keys 
+- bounding boxes with round objects 
+- building bridges with string, when gap too big 
+- formatting items in css
+
