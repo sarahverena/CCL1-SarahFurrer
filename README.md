@@ -39,5 +39,8 @@ Introduction CCL, planing out the week, implementing the jump n run mechanics,he
 - bounding boxes with round objects 
 - building bridges with string, when gap too big 
 - formatting items in css
-
+### Day 5 
+- finishing level design 
+- doing the graphics 
+- adding sound? probably on 
 
