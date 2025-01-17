@@ -81,7 +81,7 @@ class BaseGameObject {
             let otherObject = global.allGameObjects[i];
             if (otherObject.active == true && otherObject.blockGravityForces == true) {
                 let collisionHappened = global.detectBoxCollision(this, otherObject);
-                if (collisionHappened) {
+                if (collisionHappened && (this.name !== "Weapon" || this.name == "Weapon" && otherObject.name !== "Spider")) {
                         if (this.physicsData.fallVelocity > 0) {
                             this.physicsData.isGrounded = true;
                             this.y = otherObject.getBoxBounds().top - this.height - (this.getBoxBounds().bottom - (this.y + this.height)) - 0.1;

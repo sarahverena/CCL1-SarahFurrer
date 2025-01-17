@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Hello, world!</title>
@@ -8,39 +9,44 @@
   <link rel="stylesheet" type="text/css" href="./css/style.css" />
   <link rel="icon" href="favicon.png">
 </head>
+
 <body>
   <!-- further HTML elements, that should maybe be displayed above your game. E.g. Healtbar, .... -->
   <div id="container">
     <div id="gameContainer">
       <div id="startGameScreen">
         <button id="startGameButton">Start Game</button>
-       </div>
-    <div id="health-bar"></div>
-    <div id="score-display">
-      Items: <span id="score">0</span>
-    </div>
-    
-    <!-- further HTML elements, that should be behind your game. e.g. Background image, .... -->
-    <div id="background"></div>
-    <canvas id="canvas" width="1420" height="500"></canvas> <!-- change the size attributes of your canvas according to your game -->
-    <!-- further HTML elements, that should overlay your game. e.g. Main Screen, Game Over screen, .... -->
-     <div id="gameOverScreen">
-      <button id="gameOverButton">Restart Game</button>
-     </div>
+      </div>
+      <div id="newLevel">
+      </div>
+      <div id="health-bar"></div>
+      <div id="score-display">
+        Items: <span id="score">0</span>
+      </div>
 
-     <div id="endGameScreen"></div>
+      <!-- further HTML elements, that should be behind your game. e.g. Background image, .... -->
+      <div id="background"></div>
+      <canvas id="canvas" width="1420" height="500"></canvas>
+      <!-- change the size attributes of your canvas according to your game -->
+      <!-- further HTML elements, that should overlay your game. e.g. Main Screen, Game Over screen, .... -->
+      <div id="gameOverScreen">
+        <button id="gameOverButton">Restart Game</button>
+      </div>
+
+      <div id="endGameScreen"></div>
       <button id="endGameButton">Next level</button>
-     </div>
+    </div>
 
- 
+
     <!-- <div id="mainScreen"></div> -->
   </div>
   <!-- further HTML elements, that should maybe be displayed below your game. E.g. Score, .... -->
-</div>
+  </div>
 
   <script type="module" src="./scripts/modules/global.js"></script>
   <script type="module" src="./scripts/modules/input.js"></script>
   <script type="module" src="./scripts/modules/main.js"></script>
-  
+
 </body>
+
 </html>

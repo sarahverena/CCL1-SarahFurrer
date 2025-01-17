@@ -5,6 +5,7 @@ import { displayGameOverScreen } from "../modules/main.js";
 import { Weapon} from "./weapon.js";
 
 
+
 class Skeleton extends BaseGameObject {
     name = "Skeleton";
     xVelocity = 0;
@@ -85,6 +86,7 @@ class Skeleton extends BaseGameObject {
 
         }
 
+        
 
     }
 

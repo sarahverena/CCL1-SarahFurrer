@@ -17,6 +17,11 @@ function displayGameOverScreen() {
 
 }
 
+
+setupGame1();
+
+
+
 let startGameButton = document.getElementById("startGameButton");
 startGameButton.addEventListener("click", () => {
     let startGameScreen = document.getElementById("startGameScreen")
@@ -94,11 +99,46 @@ function setupGame() {
     requestAnimationFrame(gameLoop);
 }
 
+function setupGame1() {
+    let gameOverScreen = document.getElementById("gameOverScreen");
+    gameOverScreen.style.display = "none";
+    resetGlobals();
+    
+
+    global.playerObject = new Skeleton(0, 400, 64, 64);
+    global.leftMoveTrigger = new MoveTrigger(-10, 100, 20, 900, 100);
+    global.rightMoveTrigger = new MoveTrigger(800, 100, 20, 900, -100);
+    new Floor(0, 400, 9000, 40);
+    new BlockObject(200, 280, 100, 100);
+    new BlockObject(400, 200, 50, 50);
+    new BlockObject(500, 100, 50, 50);
+    new BlockObject(550, 100, 50, 50);
+    new BlockObject(600, 100, 50, 50);
+    new Heart (400, 200, 50, 50);
+    new Spider(400, 200, 50, 50);
+    new Portal(1200, 350, 50, 50);
+    
+    
+   // global.weapon = new Weapon(global.playerObject.x + 30, global.playerObject.y, 40, 40);
+   // global.weapon = new Weapon(100, 300, 70, 70); 
+
+    //new BlockObject(300, 400, 50, 50);
+    // setup your game here - means: Create instances of the GameObjects that belong to your game.
+    // e.g.: 
+    /*    
+                global.playerObject = new PacMan(200, 300, 60, 60);
+                new Wall(0, 0, 100, 100);
+                new Candy(100, 100, 100, 100);
+    }*/
+    requestAnimationFrame(gameLoop);
+}
+
+
 setupGame();
 
 console.log(gameLoop);
 
-export{setupGame,displayGameOverScreen}; 
+export{setupGame,displayGameOverScreen, setupGame1}; 
 
 
 

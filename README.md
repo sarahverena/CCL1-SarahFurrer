@@ -40,3 +40,4 @@ Introduction CCL, planing out the week, implementing the jump n run mechanics,he
 - building bridges with string, when gap too big 
 - formatting items in css
 
+
