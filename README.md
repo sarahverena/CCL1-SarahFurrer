@@ -40,7 +40,12 @@ Introduction CCL, planing out the week, implementing the jump n run mechanics,he
 - building bridges with string, when gap too big 
 - formatting items in css
 ### Day 5 
+*****************************
 - finishing level design 
 - doing the graphics 
-- adding sound? probably on 
-
+- adding sound? probably on the weekend
+- drew the background
+### Day 6 
+*******************************
+-painted the sprite sheets of the player objects 
+-creating the actual sprite sheet
