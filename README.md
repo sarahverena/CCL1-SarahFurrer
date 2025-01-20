@@ -47,5 +47,8 @@ Introduction CCL, planing out the week, implementing the jump n run mechanics,he
 - drew the background
 ### Day 6 
 *******************************
--painted the sprite sheets of the player objects 
--creating the actual sprite sheet
+- painted the sprite sheets of the player objects ⭐️
+- creating the actual sprite sheet⭐️
+- painted the portal 
+- painting enemie? 
+- one background image
