@@ -10,7 +10,7 @@ function move(event) {
     //Example Movement for the PacMan Game
     switch(event.key) {
         case "d":
-            if (global.playerObject.TurningRight == false)
+            if (global.playerObject.TurningRight == false || global.playerObject.xVelocity == 0)
                 global.playerObject.switchCurrentSprites(27, 35); 
             global.playerObject.xVelocity = 200;
             global.playerObject.yVelocity = 0;
@@ -18,7 +18,7 @@ function move(event) {
             console.log("velocity set");
             break;
         case "a":   
-            if (global.playerObject.TurningRight == true)
+            if (global.playerObject.TurningRight == true || global.playerObject.xVelocity == 0)
                 global.playerObject.switchCurrentSprites(9, 17);
             global.playerObject.xVelocity = -200;
             global.playerObject.yVelocity = 0;

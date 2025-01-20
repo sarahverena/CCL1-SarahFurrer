@@ -38,6 +38,7 @@ function startGameScreen() {
 
 
 function gameLoop(totalRunningTime) {
+
     if (global.playerObject.currentHealth <= 0) {
         displayGameOverScreen();
         global.gameRunning = false;

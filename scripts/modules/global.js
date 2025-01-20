@@ -8,7 +8,7 @@ function resetGlobals() {
     global.allGameObjects = [];
     global.playerObject = {};
     global.backgroundShift = 0;
-    global.backgroundMaxShift = -600;
+    global.backgroundMaxShift = -1000;
     global.gravityForce = 9.8;
     global.pixelToMeter = 100;
     global.leftMoveTrigger;
