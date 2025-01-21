@@ -7,6 +7,26 @@ import { Spider } from "../gameObjects/spider.js";
 import  {Heart} from "../gameObjects/heart.js";
 import { Portal } from "../gameObjects/portal.js";
 
+
+function displayStoryScreen(){
+    let storyScreen = document.getElementById("storyScreen");
+    storyScreen.style.display = "block";
+}
+
+let storyButton = document.getElementById("storyButton");
+    storyButton.addEventListener("click", () => {
+        document.getElementById("background").style.backgroundImage = "url(../images/universe.jpg)";
+    let storyScreen = document.getElementById("storyScreen");
+    storyScreen.style.display = "none";
+    setupGame();
+    })
+
+
+
+
+
+
+
 //restart game button 
 let gameOverButton = document.getElementById("gameOverButton");
 gameOverButton.addEventListener("click", setupGame);
@@ -17,6 +37,19 @@ function displayGameOverScreen() {
 
 }
 
+//winscreen 
+let winScreenButton = document.getElementById("winScreenButton");
+winScreenButton.addEventListener("click", () => {
+    let winScreen = document.getElementById("winScreen");
+    winScreen.style.display = "none";
+    global.currentLevel = 0;
+    startGameScreen();   
+});
+
+function displayWinScreen() {
+    let displayWinScreen = document.getElementById("winScreen")
+    displayWinScreen.style.display = "block";
+}
 
 setupGame1();
 
@@ -30,9 +63,11 @@ startGameButton.addEventListener("click", () => {
 });
 
 
+
+
 function startGameScreen() {
     let startGameScreen = document.getElementById("startGameScreen")
-    startGameScreen.style.display = "none";
+    startGameScreen.style.display = "block";
 }
 
 
@@ -41,6 +76,10 @@ function gameLoop(totalRunningTime) {
 
     if (global.playerObject.currentHealth <= 0) {
         displayGameOverScreen();
+        global.gameRunning = false;
+    }
+    if (global.currentLevel == 2) {
+        displayWinScreen();
         global.gameRunning = false;
     }
 
@@ -72,6 +111,9 @@ function gameLoop(totalRunningTime) {
 function setupGame() {
     let gameOverScreen = document.getElementById("gameOverScreen");
     gameOverScreen.style.display = "none";
+
+    let winScreen = document.getElementById("winScreen");
+    winScreen.style.display = "none";
     resetGlobals();
     
 
@@ -82,8 +124,13 @@ function setupGame() {
     new BlockObject(200, 280, 100, 100);
     new BlockObject(400, 200, 50, 50);
     new Heart (400, 200, 50, 50);
-    new Spider(400, 200, 50, 50);
-    new Portal(1200, 350, 50, 50);
+    new Spider(400, 200, 100, 100);
+    new Portal(1200, 260, 200, 200);
+    new Heart (420, 150, 50, 50);
+    new Heart (440, 180, 50, 50);
+    new Heart (460, 205, 50, 50);
+    new Heart (480, 200, 50, 50);
+    
     
     
    // global.weapon = new Weapon(global.playerObject.x + 30, global.playerObject.y, 40, 40);
@@ -116,8 +163,12 @@ function setupGame1() {
     new BlockObject(550, 100, 50, 50);
     new BlockObject(600, 100, 50, 50);
     new Heart (400, 200, 50, 50);
-    new Spider(400, 200, 50, 50);
-    new Portal(1200, 350, 50, 50);
+    new Spider(400, 200, 300, 300);
+    new Portal(1200, 270, 200, 200);
+    new Heart (405, 150, 50, 50);
+    new Heart (410, 180, 50, 50);
+    new Heart (415, 205, 50, 50);
+    new Heart (420, 200, 50, 50);
     
     
    // global.weapon = new Weapon(global.playerObject.x + 30, global.playerObject.y, 40, 40);
@@ -139,7 +190,7 @@ setupGame();
 
 console.log(gameLoop);
 
-export{setupGame,displayGameOverScreen, setupGame1}; 
+export{setupGame,displayGameOverScreen, setupGame1, displayWinScreen, displayStoryScreen}; 
 
 
 

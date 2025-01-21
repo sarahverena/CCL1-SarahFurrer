@@ -5,7 +5,7 @@ class Heart extends BaseGameObject {
     name = "Heart";
     xVelocity = 0;
     yVelocity = 0;
-    useGravityForces = true;
+    useGravityForces = false;
 
     reactToCollision = function (collidingObject) {
         if (collidingObject.name == "Skeleton") {

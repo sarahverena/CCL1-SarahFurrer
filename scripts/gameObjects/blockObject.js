@@ -3,6 +3,7 @@ import { global } from "../modules/global.js";
 
 
 class BlockObject extends BaseGameObject {
+    name = "Bubble";
     blockGravityForces = true;
 
     reactToCollision = function (collidingObject)   {

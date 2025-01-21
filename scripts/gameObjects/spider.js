@@ -72,8 +72,8 @@ class Spider extends BaseGameObject {
     constructor(x, y, width, height) {
         super(x, y, width, height);
         //this.loadImages(["./images/apple.png"]);
-        this.loadImagesFromSpritesheet("./images/BODY_skeleton.png", 9, 4, 9);
-		this.switchCurrentSprites(10, 10);
+        this.loadImagesFromSpritesheet("./images/enemy2.png", 2, 1, 2);
+		this.switchCurrentSprites(0,1);
     }
 }
 

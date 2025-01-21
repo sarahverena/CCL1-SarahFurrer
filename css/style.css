@@ -1,3 +1,7 @@
+body {
+    overflow: hidden;
+}
+
 #container {
     display:flex;
     justify-content: center;
@@ -29,7 +33,7 @@
     width: 1000px; 
     height: 500px;
     /*background-image: url("../images/background.jpg");*/
-    background-image: url("../images/universe.jpg");
+   /* background-image: url("../images/universe.jpg");*/
 
     background-size: cover;
     z-index: 0;
@@ -57,13 +61,21 @@
 }
 
 #score-display {
-    position: fixed;
+    /*position: fixed;
     top: 20px;
     right: 20px;
     font-size: 24px;
     font-family: Arial, sans-serif;
     color: #000;
+    z-index: 20;*/
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    top: 45px;
+    left: 12px;
     z-index: 20;
+    font-size: larger;
+    color: white;
 
   }
 
@@ -91,6 +103,29 @@
     color: red;
 }
 
+#winScreen {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    z-index: 30;
+    width: 1000px; 
+    height: 500px;
+    background-color:rgb(255, 156, 9) ;
+
+}
+
+#winScreenButton {
+  display: flex;
+  cursor:pointer;
+  border-radius: 8px;
+  padding: 15px 30px; 
+  font-size: medium;
+
+}
+#winScreenButton:hover {
+    color: red;
+}
 
 #startGameScreen {
     display: flex;
@@ -111,4 +146,29 @@
   padding: 15px 30px; 
   font-size: medium;
 
+}
+
+#storyScreen {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    z-index: 30;
+    width: 1000px; 
+    height: 500px;
+    background-color:rgb(255, 156, 9);
+    /* IMAGE VERLINKEN */
+
+}
+
+#storyButton {
+  display: flex;
+  cursor:pointer;
+  border-radius: 8px;
+  padding: 15px 30px; 
+  font-size: medium;
+
+}
+#storyButton:hover {
+    color: red;
 }

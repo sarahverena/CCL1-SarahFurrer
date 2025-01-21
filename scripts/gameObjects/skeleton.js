@@ -13,8 +13,6 @@ class Skeleton extends BaseGameObject {
     useGravityForces = true;
     currentHealth = 3;
     maxHealth = 20;
-    score = 0;
-    maxScore = 4; 
     canTakeDamage = true; 
     DamageTimeOut = 1000;
     TurningRight = false; 
@@ -54,9 +52,10 @@ class Skeleton extends BaseGameObject {
     constructor(x, y, width, height) {
         super(x, y, width, height);
         //this.loadImages(["./images/apple.png"]);
-        this.loadImagesFromSpritesheet("./images/BODY_skeleton.png", 9, 4, 9);
-        this.switchCurrentSprites(18,18);
+        this.loadImagesFromSpritesheet("../../images/player original.png", 9, 2, 9);
+        this.switchCurrentSprites(0,0);
         this.updateHealthDisplay();
+        document.getElementById("score-display").innerHTML = "Items:" + global.currentItems;
     }
 
      updateHealthDisplay = function (){
@@ -72,12 +71,8 @@ class Skeleton extends BaseGameObject {
 
     reactToCollision = function(collidingObject){
         if(collidingObject.name == "Heart"){
-            
-            if (this.score < this.maxScore){
-                this.score++;
-            }
-            document.getElementById("score-display").innerHTML = "Items:" + this.score;
-            console.log(this.score);
+            global.currentItems++;
+            document.getElementById("score-display").innerHTML = "Items:" + global.currentItems;
         }
         if(collidingObject.name == "Spider"){
             this.takeDamage();

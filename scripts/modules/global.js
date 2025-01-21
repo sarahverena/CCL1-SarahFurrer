@@ -14,10 +14,9 @@ function resetGlobals() {
     global.leftMoveTrigger;
     global.rightMoveTrigger;
     global.gameRunning = true;
-    
-    
+    global.currentItems = 0;
 }
-
+global.currentLevel = 0; 
 global.prevTotalRunningTime = 0;
 
 

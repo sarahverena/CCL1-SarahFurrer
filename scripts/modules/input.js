@@ -11,7 +11,8 @@ function move(event) {
     switch(event.key) {
         case "d":
             if (global.playerObject.TurningRight == false || global.playerObject.xVelocity == 0)
-                global.playerObject.switchCurrentSprites(27, 35); 
+                 global.playerObject.switchCurrentSprites(1, 8); 
+                
             global.playerObject.xVelocity = 200;
             global.playerObject.yVelocity = 0;
             global.playerObject.TurningRight = true;
@@ -19,7 +20,7 @@ function move(event) {
             break;
         case "a":   
             if (global.playerObject.TurningRight == true || global.playerObject.xVelocity == 0)
-                global.playerObject.switchCurrentSprites(9, 17);
+                global.playerObject.switchCurrentSprites(10, 17);
             global.playerObject.xVelocity = -200;
             global.playerObject.yVelocity = 0;
             global.playerObject.TurningRight = false;

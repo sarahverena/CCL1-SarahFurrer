@@ -88,6 +88,9 @@ class BaseGameObject {
                         }
                         else if (this.physicsData.fallVelocity < 0) {
                             this.y = otherObject.getBoxBounds().bottom  + 0.1;
+                            if (otherObject.name == "Bubble") {
+                                otherObject.active = false;
+                            }
                         }
                         this.physicsData.jumpForce = 0;
                         this.physicsData.fallVelocity = 0;

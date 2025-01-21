@@ -52,3 +52,15 @@ Introduction CCL, planing out the week, implementing the jump n run mechanics,he
 - painted the portal 
 - painting enemie? 
 - one background image
+
+### Day 7
+********************************
+- making sprite for enemie 
+- second background 
+- heart lives 
+- formatting my items 
+- implemented story screen and win screen 
+- fixed the sprite/implemented portal
+- resized the sprites for them to look good 
+- having to collect a specific number of items to move on to the next level 
+- if u touch a block object (in my case a bubble), it gets removed and you can collect the star thats inside it
