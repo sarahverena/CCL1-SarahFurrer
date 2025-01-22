@@ -18,6 +18,7 @@ class Skeleton extends BaseGameObject {
     TurningRight = false; 
     canShoot = true; 
     ShootTimeOut = 1000;
+
    
 
     
@@ -29,9 +30,9 @@ class Skeleton extends BaseGameObject {
     getBoxBounds = function () {
         let bounds = {
             left: this.x + 18,
-            right: this.x + this.width - 22,
+            right: this.x + this.width -22,
             top: this.y + 14,
-            bottom: this.y + this.height - 3
+            bottom: this.y + this.height - 18
         }
         return bounds;
     }
@@ -39,6 +40,10 @@ class Skeleton extends BaseGameObject {
     update = function() {
         this.x += this.xVelocity * global.deltaTime;
         this.y += this.yVelocity * global.deltaTime;
+
+    
+        
+
         if (this.xVelocity == 0) {
             global.playerObject.switchCurrentSprites(this.animationData.firstSpriteIndex, this.animationData.firstSpriteIndex);
         }
@@ -52,18 +57,21 @@ class Skeleton extends BaseGameObject {
     constructor(x, y, width, height) {
         super(x, y, width, height);
         //this.loadImages(["./images/apple.png"]);
-        this.loadImagesFromSpritesheet("../../images/player original.png", 9, 2, 9);
+        this.loadImagesFromSpritesheet("../../images/player original fixed.png", 9, 2, 9);
         this.switchCurrentSprites(0,0);
         this.updateHealthDisplay();
-        document.getElementById("score-display").innerHTML = "Items:" + global.currentItems;
+        document.getElementById("score-display").innerHTML = "Items:" + global.currentItems + "/5";
     }
+
+
+    
 
      updateHealthDisplay = function (){
        let healthContainer = document.getElementById("health-bar");
         healthContainer.innerHTML = "";
         for (let i = 0; i < this.currentHealth; i++){
             let heart = document.createElement("img");
-            heart.src = "./images/star.png";
+            heart.src = "./images/starsi.png";
             heart.classList.add("heart");
             healthContainer.appendChild(heart);
         }
@@ -72,12 +80,19 @@ class Skeleton extends BaseGameObject {
     reactToCollision = function(collidingObject){
         if(collidingObject.name == "Heart"){
             global.currentItems++;
-            document.getElementById("score-display").innerHTML = "Items:" + global.currentItems;
+            document.getElementById("score-display").innerHTML = "Items:" + global.currentItems + "/5";
         }
         if(collidingObject.name == "Spider"){
             this.takeDamage();
             this.x = this.previousX;
             this.y = this.previousY;
+
+            const gameContainer = document.getElementById("gameContainer");
+            gameContainer.classList.add("gameContainer-glow-red");
+
+            setTimeout(() => {
+                gameContainer.classList.remove("gameContainer-glow-red");
+            }, 500);
 
         }
 
@@ -103,7 +118,10 @@ class Skeleton extends BaseGameObject {
     
     WeaponShooting = function(){
         if(this.canShoot == true) {
-        new Weapon(this.TurningRight == true ? this.x + this.width-15 : this.x + 10 , this.y +20, 30, 30, this.TurningRight); 
+        new Weapon(this.TurningRight == true ? this.x-25 + this.width : this.x + 10, this.y +20, 30, 30, this.TurningRight); 
+
+        
+        
         
         this.canShoot = false;
             window.setTimeout(()=>{this.canShoot = true;},this.ShootTimeOut);

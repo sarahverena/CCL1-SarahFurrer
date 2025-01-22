@@ -1,4 +1,6 @@
 body {
+    margin: 0;
+    padding: 0;
     overflow: hidden;
 }
 
@@ -110,19 +112,23 @@ body {
     justify-content: center;
     z-index: 30;
     width: 1000px; 
-    height: 500px;
-    background-color:rgb(255, 156, 9) ;
-
+    height: 500px; /* Containerhöhe */
+    background-image: url("../images/winning\ screen3.png");
+    background-size: cover; /* Bild füllt den gesamten Container aus */
+    background-repeat: no-repeat; /* Wiederholung vermeiden */
+    background-position: top center; /* Bild wird nach oben ausgerichtet */
 }
 
 #winScreenButton {
-  display: flex;
-  cursor:pointer;
-  border-radius: 8px;
-  padding: 15px 30px; 
-  font-size: medium;
-
-}
+    position: absolute;
+    bottom: 160px; /* Abstand vom unteren Rand */
+    right: 275px; /* Abstand vom rechten Rand */
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 15px 30px;
+    font-size: medium;
+  }
+  
 #winScreenButton:hover {
     color: red;
 }
@@ -135,40 +141,55 @@ body {
     z-index: 30;
     width: 1000px; 
     height: 500px;
-    background-color:blanchedalmond ;
+    background-image: url("../images/starter.png");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: top center; 
 
 }
 
 #startGameButton {
-  display: flex;
-  cursor:pointer;
-  border-radius: 8px;
-  padding: 15px 30px; 
-  font-size: medium;
+    position: absolute;
+    bottom: 110px; 
+    right: 612px; 
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 15px 30px;
+    font-size: medium;
 
 }
 
 #storyScreen {
-    display: flex;
+    display: flex; 
     position: relative;
     align-items: center;
     justify-content: center;
     z-index: 30;
     width: 1000px; 
     height: 500px;
-    background-color:rgb(255, 156, 9);
-    /* IMAGE VERLINKEN */
+    background-image: url("../images/story3.png");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: top center; 
+
 
 }
 
 #storyButton {
-  display: flex;
-  cursor:pointer;
-  border-radius: 8px;
-  padding: 15px 30px; 
-  font-size: medium;
+    position: absolute;
+    bottom: 35px; 
+    right: 415px; 
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 15px 30px;
+    font-size: medium;
 
 }
 #storyButton:hover {
     color: red;
+}
+
+.gameContainer-glow-red {
+    box-shadow: 0 0 20px red;
+    border: 2px solid red;
 }

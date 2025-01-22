@@ -34,7 +34,7 @@ class Portal extends BaseGameObject {
 
     constructor (x, y, width, height) {
         super(x, y, width, height);
-        this.loadImages(["./images/portal.png"]);
+        this.loadImages(["./images/portal2.png"]);
     }
 }
 

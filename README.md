@@ -64,3 +64,11 @@ Introduction CCL, planing out the week, implementing the jump n run mechanics,he
 - resized the sprites for them to look good 
 - having to collect a specific number of items to move on to the next level 
 - if u touch a block object (in my case a bubble), it gets removed and you can collect the star thats inside it
+
+### Day 8
+********************************
+- finishing level design 
+- removing floor in 2nd level and if u fall, u need to start in level1 again
+- made backgorund for the 2nd level 
+- changed sprites from player object, because they looked weird 
+

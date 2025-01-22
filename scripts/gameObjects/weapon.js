@@ -5,7 +5,7 @@ class Weapon extends BaseGameObject {
     name = "Weapon";
     xVelocity = 0;
     yVelocity = 0;
-    useGravityForces = true;
+    useGravityForces = false;
 	active = true; 
 	/*weaponTimeOut = 2000;*/
 	weaponTimer = 0; 

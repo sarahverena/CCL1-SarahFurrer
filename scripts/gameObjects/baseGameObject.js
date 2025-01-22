@@ -41,7 +41,7 @@ class BaseGameObject {
         let bounds = {
             left: this.x,
             right: this.x + this.width,
-            top: this.y,
+            top: this.y ,
             bottom: this.y + this.height
         }
         return bounds;
@@ -87,11 +87,14 @@ class BaseGameObject {
                             this.y = otherObject.getBoxBounds().top - this.height - (this.getBoxBounds().bottom - (this.y + this.height)) - 0.1;
                         }
                         else if (this.physicsData.fallVelocity < 0) {
-                            this.y = otherObject.getBoxBounds().bottom  + 0.1;
-                            if (otherObject.name == "Bubble") {
-                                otherObject.active = false;
-                            }
+                            this.y = otherObject.getBoxBounds().bottom + 0.1;
+
+                            if (otherObject.name === "Bubble" || otherObject.name ==="Blocksi" ){
+                                
+                                otherObject.checkBubblePop(this);
+                            } 
                         }
+                        
                         this.physicsData.jumpForce = 0;
                         this.physicsData.fallVelocity = 0;
                         this.physicsData.prevFallingVelocity = 0; 

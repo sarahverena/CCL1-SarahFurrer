@@ -7,7 +7,7 @@ class Spider extends BaseGameObject {
     yVelocity = 0;
     useGravityForces = true;
 	movingtoRight = true; 
-	directionChangeInterval = 2500;
+	directionChangeInterval = 500;
 	lastDirectionChange = Date.now() // already implemented from browser 
 	blockGravityForces = true;
 
