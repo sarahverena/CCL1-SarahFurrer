@@ -29,9 +29,19 @@ class BlockObject extends BaseGameObject {
         }
     }
 
+    getBoxBounds = function () {
+        let bounds = {
+            left: this.x + 5,
+            right: this.x + this.width -28,
+            top: this.y ,
+            bottom: this.y + this.height
+        }
+        return bounds;
+    };
+
     constructor (x, y, width, height) {
         super(x, y, width, height);
-        this.loadImages(["./images/bubbleblock.png"]);
+        this.loadImages(["./images/bubble rund.png"]);
     }
 }
 

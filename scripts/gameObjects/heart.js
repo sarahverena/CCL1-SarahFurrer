@@ -27,9 +27,7 @@ class Heart extends BaseGameObject {
     update = function() {
         this.x += this.xVelocity * global.deltaTime;
         this.y += this.yVelocity * global.deltaTime;
-        if (this.xVelocity == 0) {
-            this.switchCurrentSprites(this.animationData.firstSpriteIndex, this.animationData.firstSpriteIndex);
-        }
+        
     }
 
    /* draw = function () {
@@ -39,8 +37,10 @@ class Heart extends BaseGameObject {
 
     constructor(x, y, width, height) {
         super(x, y, width, height);
-        this.loadImages(["./images/threads.png"]);
+        this.loadImagesFromSpritesheet("./images/threadanim.png", 3, 1, 3); 
+        this.switchCurrentSprites(0,2);
     }
+
 }
 
 export {Heart}

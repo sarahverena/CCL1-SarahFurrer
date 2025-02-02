@@ -72,3 +72,10 @@ Introduction CCL, planing out the week, implementing the jump n run mechanics,he
 - made backgorund for the 2nd level 
 - changed sprites from player object, because they looked weird 
 
+### Day 9
+******************************
+- finishing design for 2nd level 
+- making last graphics for the game 
+- addding soounds 
+
+
