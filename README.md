@@ -1,65 +1,74 @@
-# 🎮 **Game Title** 
+# CCL1
+### Day 1 
 
-> **Short Pitch**: My game is a 2D jump-and-run platformer where the player has to defeat enemies, collect items, and reach a portal in order to progress to the next level. The player assumes the role of a former fashion designer who now seeks to bring balance back to a fractured multiverse after the Magical String of Love was shattered.
+******************
 
-Armed with the Magical String, players will be enabled to take part in fast-paced combat, collecting items and defeating enemies deftly to unlock the portal at the end of each level. Every stage brings new challenges, enemies, and environments that demand skillful movement and precise attacks. The game is all about fluid platforming, engaging enemy encounters, and rewarding progression, making each level a test of agility and combat strategy.
----
+Introduction CCL, planing out the week, implementing the jump n run mechanics,health bar, a little bit of layout
 
-## 🌐 **Play the Game**
-[Click here to play the game!](https://sarahverena.github.io/CCL_SarahFurrer1/)
+### Day 2
 
----
+******************
 
-## 📸 **Screenshots**
+- healthbar design
+- collecting items bar (I displayed it with a number) ⭐️
+- implementing enemies and my weapon 
+- figuring out if i wanna throw a ball or tie a string around the enemie 
+- when I collect items, items ++, display it with number ⭐️
+- working on reseting the game (still have problems solving the issues, because when I restart the game, all the animatead objects are not appearing(probably gravity is the issue))
 
-### Main Gameplay:
-<div style="text-align: center;">
-  <img src="images/gameplay1.jpeg" alt="Gameplay Screenshot" width="600">
-  <img src="images/gameplay2.jpeg" alt="Gameplay Screenshot" width="600">
-  <p> Example of gameplay in action.*</p>
-</div>
+### Day 3 
+ *******************
 
----
+- fixing reset game/gravity bug 
+- implementing the weapon& killing of enemie
+- designing level(plattforms)
+- making new level 
+- fixing reset game/gravity bug ⭐️
+- implementing the weapon& killing of enemy⭐️
+- designing level(plattforms) -> day4
+- making new level -> day4
+- I was only able to shoot in one direction, now I am able to shoot in both directions 
+- I controlled the amount of weapons you can shoot at once, by limiting it to being able to shoot only one weapon every 2-3 seconds
+### Day 4
+**************************
+- setting up github properly tp be able to commit my code ⭐️
+- designing levels / maybe making a new level ‼️
+- making a proper pause and end screen ⭐️ (made the end screen, not sure if I even want to have a pause screen)
+- making a home screen ⭐️
+- Ideas: maybe settings if the user prefers arrow keys or awsd keys 
+- bounding boxes with round objects 
+- building bridges with string, when gap too big 
+- formatting items in css
+### Day 5 
+*****************************
+- finishing level design 
+- doing the graphics 
+- adding sound? probably on the weekend
+- drew the background
+### Day 6 
+*******************************
+- painted the sprite sheets of the player objects ⭐️
+- creating the actual sprite sheet⭐️
+- painted the portal 
+- painting enemie? 
+- one background image
 
-### Screens:
-<div style="text-align: center;">
-  <img src="images/gamerover.png" alt="Menu UI Screenshot" width="600">
-  <img src="images/startingscreen.png" alt="Menu UI Screenshot" width="600">
-  <img src="images/winnerscreen.png" alt="Menu UI Screenshot" width="600">
-  
-</div>
+### Day 7
+********************************
+- making sprite for enemie 
+- second background 
+- heart lives 
+- formatting my items 
+- implemented story screen and win screen 
+- fixed the sprite/implemented portal
+- resized the sprites for them to look good 
+- having to collect a specific number of items to move on to the next level 
+- if u touch a block object (in my case a bubble), it gets removed and you can collect the star thats inside it
 
----
+### Day 8
+********************************
+- finishing level design 
+- removing floor in 2nd level and if u fall, u need to start in level1 again
+- made backgorund for the 2nd level 
+- changed sprites from player object, because they looked weird 
 
-## 🎨 **Spritesheets**
-Below are the sprites used to create characters and objects in the game:
-
-### Player Character:
-<div style="text-align: center;">
-  <img src="images/player original fixed.png" alt="Player Spritesheet" width="500">
-  <p>*Figure 3: Player character animations.*</p>
-</div>
-
----
-
-### Enemies and NPCs:
-<div style="text-align: center;">
-  <img src="images/enemy2.png" alt="Enemy Spritesheet" width="500">
-  <p>*Figure 4: Enemy animations.*</p>
-</div>
-
----
-
-## ✍️ **Reflection**
-
-### What went well:
-- **Creative Design:** I really liked everything that I designed, although it was really hard to draw all the spritesheets
-- **Core Mechanics:** It was pretty okay to implement the gravity and everything based on Lukas template. But all in one, things like shooting a weapon realistically, is way easier to do in our heads than in coding. But at the end it is incredible what you can do with coding.
-
-### Challenges:
-- **Debugging** after changing one little thing, there is a high chance that everything suddenly doesnt work anymore. Buth with patience, chocolate and help form tutors and friends, it is fine and you gon make it work.
-- **Spritesheets:** making the spritesheets realistically and look good was way harder than expected
-
-### Lessons Learned:
-- **Trust the process** Progress takes time, and setbacks are part of growth, even in developing a game. At the end of the day every step you take, gets you closer to your goal. Even if you dont see all the progress, at the end it will be worth it
-- **Quality over Quantity** Focusing on one unique mechanic instead of multiple features made the game more polished.
