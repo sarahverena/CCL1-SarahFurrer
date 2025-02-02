@@ -77,7 +77,7 @@ body {
     left: 12px;
     z-index: 20;
     font-size: larger;
-    color: white;
+    color: rgb(186, 159, 20);
 
   }
 
@@ -89,7 +89,10 @@ body {
     z-index: 30;
     width: 1000px; 
     height: 500px;
-    background-color:blanchedalmond ;
+    background-image: url("../images/gamerover.png");
+    background-size: cover; /* Bild füllt den gesamten Container aus */
+    background-repeat: no-repeat; /* Wiederholung vermeiden */
+    background-position: top center; /* Bild wird nach oben ausgerichtet */
 
 }
 
@@ -102,7 +105,7 @@ body {
 
 }
 #gameOverButton:hover {
-    color: red;
+    color: rgb(246, 103, 254);
 }
 
 #winScreen {
@@ -113,7 +116,7 @@ body {
     z-index: 30;
     width: 1000px; 
     height: 500px; /* Containerhöhe */
-    background-image: url("../images/winning\ screen3.png");
+    background-image: url("../images/winnerscreen.png");
     background-size: cover; /* Bild füllt den gesamten Container aus */
     background-repeat: no-repeat; /* Wiederholung vermeiden */
     background-position: top center; /* Bild wird nach oben ausgerichtet */
@@ -130,7 +133,7 @@ body {
   }
   
 #winScreenButton:hover {
-    color: red;
+    color: rgb(246, 103, 254);
 }
 
 #startGameScreen {
@@ -141,7 +144,7 @@ body {
     z-index: 30;
     width: 1000px; 
     height: 500px;
-    background-image: url("../images/starter.png");
+    background-image: url("../images/startingscreen.png");
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: top center; 
@@ -159,6 +162,10 @@ body {
 
 }
 
+#startGameButton:hover {
+    color: rgb(246, 103, 254);
+}
+
 #storyScreen {
     display: flex; 
     position: relative;
@@ -167,13 +174,12 @@ body {
     z-index: 30;
     width: 1000px; 
     height: 500px;
-    background-image: url("../images/story3.png");
+    background-image: url("../images/geschichte.png");
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: top center; 
-
-
 }
+
 
 #storyButton {
     position: absolute;
@@ -186,7 +192,7 @@ body {
 
 }
 #storyButton:hover {
-    color: red;
+    color: rgb(246, 103, 254);
 }
 
 .gameContainer-glow-red {

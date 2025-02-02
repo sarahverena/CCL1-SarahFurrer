@@ -18,6 +18,9 @@ class Skeleton extends BaseGameObject {
     TurningRight = false; 
     canShoot = true; 
     ShootTimeOut = 1000;
+    tookDamageInLast5Seconds = false;
+    currentOpacity = 1;
+    currentOpacityChangingValue = -0.05;
 
    
 
@@ -41,7 +44,18 @@ class Skeleton extends BaseGameObject {
         this.x += this.xVelocity * global.deltaTime;
         this.y += this.yVelocity * global.deltaTime;
 
-    
+        if(this.tookDamageInLast5Seconds){
+            console.log('current opacity: ' + this.currentOpacity + ' - changevalue: ' + this.currentOpacityChangingValue);
+            this.currentOpacity += this.currentOpacityChangingValue            
+
+            if( this.currentOpacity <= 0.05){
+                this.currentOpacityChangingValue = 0.05;
+            } else if( this.currentOpacity >= 0.95){
+                this.currentOpacityChangingValue = -0.05;
+            }
+        } else {
+            this.currentOpacity = 1;
+        }
         
 
         if (this.xVelocity == 0) {
@@ -49,10 +63,14 @@ class Skeleton extends BaseGameObject {
         }
     }
 
-   /* draw = function () {
-        global.ctx.fillStyle = "#000000";
-        global.ctx.fillRect(this.x, this.y, this.width, this.height);
-    }*/
+   
+    draw = function () {
+        let sprite = this.getNextSprite();
+        console.log('Drawing with opacity: ' + this.currentOpacity)
+        global.ctx.globalAlpha = this.currentOpacity;
+        global.ctx.drawImage(sprite, this.x, this.y, this.width, this.height);
+        global.ctx.globalAlpha = 1;
+    };
 
     constructor(x, y, width, height) {
         super(x, y, width, height);
@@ -75,6 +93,7 @@ class Skeleton extends BaseGameObject {
             heart.classList.add("heart");
             healthContainer.appendChild(heart);
         }
+        this.tookDamageInLast5Seconds = false;
     } 
 
     reactToCollision = function(collidingObject){
@@ -83,9 +102,8 @@ class Skeleton extends BaseGameObject {
             document.getElementById("score-display").innerHTML = "Items:" + global.currentItems + "/5";
         }
         if(collidingObject.name == "Spider"){
+            if(this.canTakeDamage){
             this.takeDamage();
-            this.x = this.previousX;
-            this.y = this.previousY;
 
             const gameContainer = document.getElementById("gameContainer");
             gameContainer.classList.add("gameContainer-glow-red");
@@ -94,6 +112,14 @@ class Skeleton extends BaseGameObject {
                 gameContainer.classList.remove("gameContainer-glow-red");
             }, 500);
 
+            this.tookDamageInLast5Seconds = true;
+            setTimeout(()=>{
+                this.tookDamageInLast5Seconds = false;
+            }, this.DamageTimeOut);
+        }
+
+        this.x = this.previousX;
+        this.y = this.previousY;
         }
 
         
@@ -106,6 +132,7 @@ class Skeleton extends BaseGameObject {
             this.canTakeDamage = false;
             window.setTimeout(()=>{this.canTakeDamage = true;},this.DamageTimeOut);
         }
+        
         this.updateHealthDisplay();
     }
 

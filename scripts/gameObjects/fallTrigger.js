@@ -1,6 +1,7 @@
 import { BaseGameObject } from "./baseGameObject.js";
 import { global } from "../modules/global.js";
 import { setupGame } from "../modules/main.js";
+import { background2 } from "../modules/sound.js";
 
 class FallTrigger extends BaseGameObject {
     backGroundDiv = null;
@@ -12,6 +13,9 @@ class FallTrigger extends BaseGameObject {
     reactToCollision = function (collidingObject)   {
         if (collidingObject.name == "Skeleton") {
 			setupGame()
+			global.currentLevel--;
+			background2.pause()
+
 
 		}
 	}

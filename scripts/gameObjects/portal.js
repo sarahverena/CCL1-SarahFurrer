@@ -1,6 +1,7 @@
 import { BaseGameObject } from "./baseGameObject.js";
 import { global } from "../modules/global.js";
 import { displayGameOverScreen, displayWinScreen, setupGame1 } from "../modules/main.js";
+import { djMusic } from "../modules/sound.js";
 
 
 class Portal extends BaseGameObject {
@@ -12,6 +13,7 @@ class Portal extends BaseGameObject {
         }*/
 		if(collidingObject.name == "Skeleton" && global.currentItems >= 4){
 	        global.currentLevel++;
+            djMusic.play();
             if(global.currentLevel == 1){
                 setupGame1();
             }
@@ -24,7 +26,7 @@ class Portal extends BaseGameObject {
 
     getBoxBounds = function () {
         let bounds = {
-            left: this.x + 18,
+            left: this.x +105,
             right: this.x + this.width - 22,
             top: this.y + 80,
             bottom: this.y + this.height - 3

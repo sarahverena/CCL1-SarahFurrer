@@ -9,6 +9,7 @@ import { Portal } from "../gameObjects/portal.js";
 import { Ceiling } from "../gameObjects/ceiling.js";
 import { FallTrigger } from "../gameObjects/fallTrigger.js";
 import { BlockObject2 } from "../gameObjects/blockobject2.js";
+import { background2, backgroundMusic, djMusic, proud} from "./sound.js";
 
 
 function displayStoryScreen() {
@@ -52,6 +53,11 @@ winScreenButton.addEventListener("click", () => {
 function displayWinScreen() {
     let displayWinScreen = document.getElementById("winScreen")
     displayWinScreen.style.display = "block";
+    djMusic.pause();
+    background2.pause();
+    backgroundMusic.pause();
+    proud.play();
+
 }
 
 //setupGame1();
@@ -119,6 +125,9 @@ function setupGame() {
 
     let winScreen = document.getElementById("winScreen");
     winScreen.style.display = "none";
+
+    backgroundMusic.loop = true; 
+    backgroundMusic.play();
     resetGlobals();
     console.log('seas ' + global.allGameObjects.length);
 
@@ -181,6 +190,9 @@ function setupGame1() {
     document.getElementById("background").style.backgroundImage = "url(../images/wolkenbackground.png)";
     let gameOverScreen = document.getElementById("gameOverScreen");
     gameOverScreen.style.display = "none";
+    backgroundMusic.pause();
+    background2.loop = true;
+    background2.play();
     resetGlobals();
 
 
@@ -252,7 +264,7 @@ function setupGame1() {
 
     
     //others
-    new Portal(1670, 227, 150, 150);
+    new Portal(1670, 250, 150, 150);
     new Spider(550, 200, 80, 80);
     new Heart(600, 200, 50, 50);
     new Heart(530, 200, 50, 50);
@@ -263,7 +275,7 @@ function setupGame1() {
     new Spider(1500, 400, 80, 80);
     new Spider(1600, 400, 80, 80);
     new Heart(550, 400, 50, 50);
-
+    
     // global.weapon = new Weapon(global.playerObject.x + 30, global.playerObject.y, 40, 40);
     // global.weapon = new Weapon(100, 300, 70, 70); 
 
